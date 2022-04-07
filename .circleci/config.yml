@@ -12,7 +12,7 @@ jobs:
   build:
     docker:
     # specify the version you desire here
-    - image: cimg/node:15.0.1-browsers
+    - image: cimg/node:13.12-browsers
 
     # Specify service dependencies here if necessary
     # CircleCI maintains a library of pre-built images
@@ -22,14 +22,14 @@ jobs:
     working_directory: ~/WebdriverIO_v5_TypeScript
 
     steps:
-    # - browser-tools/install-chrome
-    # - browser-tools/install-chromedriver
+    - browser-tools/install-chrome
+    - browser-tools/install-chromedriver
     - checkout
 
-    - run: |
-        node --version
-        java --version
-        google-chrome --version
+    # - run: |
+    #     node --version
+    #     java --version
+    #     google-chrome --version
 
     # Download and cache dependencies
     - restore_cache:
