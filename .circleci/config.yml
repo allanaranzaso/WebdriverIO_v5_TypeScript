@@ -6,7 +6,7 @@ version: 2.1
 
 orbs:
     browser-tools: circleci/browser-tools@1.2.5
-    
+
 
 jobs:
   build:
@@ -22,8 +22,8 @@ jobs:
     working_directory: ~/WebdriverIO_v5_TypeScript
 
     steps:
-    - browser-tools/install-chrome
-    - browser-tools/install-chromedriver
+    # - browser-tools/install-chrome
+    # - browser-tools/install-chromedriver
     - checkout
 
     - run: |
