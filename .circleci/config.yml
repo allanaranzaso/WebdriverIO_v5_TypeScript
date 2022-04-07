@@ -21,7 +21,8 @@ jobs:
     working_directory: ~/WebdriverIO_v5_TypeScript
 
     steps:
-    - browser-tools/install-browser-tools
+    - browser-tools/install-chrome
+    - browser-tools/install-chromedriver
     - checkout
 
     - run: |
