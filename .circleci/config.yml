@@ -3,6 +3,10 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
+
+orbs:
+    browser-tools: circleci/browser-tools@1.1.0
+
 jobs:
   build:
     docker:
@@ -17,7 +21,13 @@ jobs:
     working_directory: ~/WebdriverIO_v5_TypeScript
 
     steps:
+    - browser-tools/install-browser-tools
     - checkout
+
+    - run: |
+        node --version
+        java --version
+        google-chrome --version
 
     # Download and cache dependencies
     - restore_cache:
