@@ -26,10 +26,11 @@ jobs:
     - browser-tools/install-chromedriver
     - checkout
 
-    # - run: |
+    - run: |
+        google-chrome --version
+
     #     node --version
     #     java --version
-        google-chrome --version
 
     # Download and cache dependencies
     - restore_cache:
